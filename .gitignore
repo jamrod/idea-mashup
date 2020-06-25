@@ -1,3 +1,19 @@
+# python django
 .env
-/ignore
 secrets.json
+
+#jamrod
+/ignore
+
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+#logs
+logs
+*.logs
+npm-debug.log
+
+# Output of 'npm pack'
+*.tgz
