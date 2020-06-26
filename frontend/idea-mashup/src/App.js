@@ -15,8 +15,21 @@ class App extends Component {
     }
   }
 
+  apiCall(url) {
+    fetch(url)
+      .then(response => response.json())
+      .then(response => {
+        // this.handleResults(response)
+        console.log(response)
+      })
+      .catch(err => {
+        console.error(err)
+      })
+  }
+
   makeRequest = (e) => {
-    console.log("clicked!")
+    console.log("clicked")
+    this.apiCall("http://127.0.0.1:8000/")
   }
 
   render() {

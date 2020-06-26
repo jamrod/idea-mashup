@@ -6,7 +6,7 @@ function Request(props) {
 
     return (
         <div className="request">
-            <button onClick={props.makeRequest}>Mashup!</button>
+            <button onClick={() => props.callRequest()}>Mashup!</button>
         </div>
     )
 }
