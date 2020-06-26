@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'idea_mashup',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
+
+MIDDLEWARE_CLASSES = (
+    'corsheaders.middleware.CorsMiddleware',
+    # 'django.middleware.common.BrokenLinkEmailsMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
+    # #...
+)
 
 ROOT_URLCONF = 'idea_mashup_django.urls'
 
@@ -136,3 +146,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# CORS whitelist
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+]
