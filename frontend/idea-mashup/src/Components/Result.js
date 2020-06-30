@@ -6,12 +6,14 @@ function Result(props) {
 
     return (
         <div className="result">
-            <p>
-                <span>{props.result.who.data} </span>
-                <span>{props.result.what.data} </span>
-                <span>{props.result.where.data} </span>
-                <span>{props.result.why.data}</span>
-            </p>
+            {props.result.who.data ?
+                <p>
+                    <span className="capital">{props.result.who.data} </span>
+                    <span className="capital">needs to {props.result.what.data} </span>
+                    <span className="capital">at {props.result.where.data} </span>
+                    <span className="capital">{props.result.why.data}</span>
+                </p>
+                : null}
         </div>
     )
 }

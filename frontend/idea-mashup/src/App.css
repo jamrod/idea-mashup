@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.footer {
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  padding: 1px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  justify-content: space-around;
+}
+
+.footer p {
+  margin: 1px;
+}
+
 .flex-container-row {
   display: flex;
   flex-direction: row;
@@ -17,4 +34,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.icons {
+  max-width: 25px;
+}
+
+.capital {
+  text-transform: capitalize;
 }

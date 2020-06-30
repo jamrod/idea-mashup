@@ -37,7 +37,13 @@ class IdeaView(APIView):
         serializedWho = WhoSerializer(who)
         what = random.choice(What.objects.all())
         serializedWhat = WhatSerializer(what)
+        where = random.choice(Where.objects.all())
+        serializedWhere = WhereSerializer(where)
+        why = random.choice(Why.objects.all())
+        serializedWhy = WhySerializer(why)
         return Response({
             'who': serializedWho.data,
             'what': serializedWhat.data,
+            'where': serializedWhere.data,
+            'why': serializedWhy.data,
         })

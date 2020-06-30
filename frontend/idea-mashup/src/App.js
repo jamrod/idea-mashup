@@ -13,7 +13,9 @@ class App extends Component {
     this.state = {
       result: {
         'who': { data: '' },
-        'what': { data: '' }
+        'what': { data: '' },
+        'where': { data: '' },
+        'why': { data: '' }
       }
     }
   }
@@ -22,7 +24,6 @@ class App extends Component {
     fetch(url)
       .then(response => response.json())
       .then(response => {
-        // this.handleResults(response)
         console.log(response)
         this.setState({
           result: response
