@@ -6,7 +6,12 @@ function Result(props) {
 
     return (
         <div className="result">
-            <span>{props.result}</span>
+            <p>
+                <span>{props.result.who.data} </span>
+                <span>{props.result.what.data} </span>
+                <span>{props.result.where.data} </span>
+                <span>{props.result.why.data}</span>
+            </p>
         </div>
     )
 }

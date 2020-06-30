@@ -11,7 +11,10 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      result: ""
+      result: {
+        'who': { data: '' },
+        'what': { data: '' }
+      }
     }
   }
 
@@ -21,6 +24,9 @@ class App extends Component {
       .then(response => {
         // this.handleResults(response)
         console.log(response)
+        this.setState({
+          result: response
+        })
       })
       .catch(err => {
         console.error(err)
@@ -29,8 +35,9 @@ class App extends Component {
 
   makeRequest = (e) => {
     console.log("clicked")
-    this.apiCall("http://127.0.0.1:8000/")
+    this.apiCall("http://127.0.0.1:8000/idea/")
   }
+
 
   render() {
     return (
